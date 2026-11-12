@@ -9,6 +9,11 @@
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
+  <!-- Preload hero background for fast first paint -->
+  <link rel="preload" as="image" href="hero-bg.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="gameplay-bg.jpg">
+  <link rel="preload" as="image" href="gameplay-fast-bg.jpg">
+
   <!-- Google Fonts: Orbitron, Rajdhani & Montserrat -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -247,7 +252,7 @@
       
       <!-- Top-Left: Official Yamaha Logo -->
       <div class="flex items-center cursor-pointer pointer-events-auto" onclick="resetToTitle()">
-        <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" class="h-[88px] w-auto object-contain drop-shadow-[0_0_20px_rgba(230,0,18,0.45)]" />
+        <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" decoding="async" class="h-[88px] w-auto object-contain drop-shadow-[0_0_20px_rgba(230,0,18,0.45)]" />
       </div>
 
       <!-- Center: Discreet Kiosk Utility Controls (Mute & Fullscreen) -->
@@ -271,7 +276,7 @@
 
       <!-- Top-Right: NMAX 155 Official White Wordmark Logo -->
       <div class="flex items-center pt-3 select-none">
-        <img src="nmax.png" alt="NMAX 155" class="h-[46px] w-auto object-contain drop-shadow-[0_0_16px_rgba(0,225,255,0.65)]" />
+        <img src="nmax.png" alt="NMAX 155" decoding="async" class="h-[46px] w-auto object-contain drop-shadow-[0_0_16px_rgba(0,225,255,0.65)]" />
       </div>
     </header>
 
@@ -280,12 +285,12 @@
     <footer class="absolute bottom-0 left-0 w-[1080px] h-[112px] px-12 pb-6 flex justify-between items-center z-50 pointer-events-none">
       <!-- Left: AMW & 75 Years Official Partner Image -->
       <div class="flex items-center bg-white/95 px-6 py-2.5 rounded-full border border-cyan-300/60 backdrop-blur-md shadow-[0_0_24px_rgba(0,229,255,0.3)]">
-        <img src="partner-amw-75.png" alt="AMW Bringing the World to You - 75 Years" class="h-[52px] w-auto object-contain" />
+        <img src="partner-amw-75.png" alt="AMW Bringing the World to You - 75 Years" decoding="async" class="h-[52px] w-auto object-contain" />
       </div>
 
       <!-- Right: Al-Futtaim Group Official Partner Image -->
       <div class="flex items-center bg-white/95 px-7 py-3 rounded-full border border-cyan-300/60 backdrop-blur-md shadow-[0_0_24px_rgba(0,229,255,0.3)]">
-        <img src="partner-alfuttaim.png" alt="Al-Futtaim Group" class="h-[42px] w-auto object-contain" />
+        <img src="partner-alfuttaim.png" alt="Al-Futtaim Group" decoding="async" class="h-[42px] w-auto object-contain" />
       </div>
     </footer>
 
@@ -295,7 +300,7 @@
       
       <!-- Full-Bleed Hero Night City & Rider Key Visual -->
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="hero-bg.jpg" alt="Yamaha NMAX 155 Beat The City" class="w-full h-full object-cover object-center hero-bg-motion" />
+        <img src="hero-bg.jpg" alt="Yamaha NMAX 155 Beat The City" decoding="async" class="w-full h-full object-cover object-center hero-bg-motion" />
         <!-- Top Sky Depth Gradient for Typography Contrast -->
         <div class="absolute inset-x-0 top-0 h-[620px] bg-gradient-to-b from-[#020817]/85 via-[#030d24]/35 to-transparent"></div>
         <!-- Bottom Vignette for PLAY Button Contrast -->
@@ -380,7 +385,7 @@
       
       <!-- Blurred Night City & Neon Highway Backdrop -->
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="hero-bg.jpg" alt="" class="w-full h-full object-cover object-center blur-[7px] brightness-[0.45] scale-105" />
+        <img src="hero-bg.jpg" alt="" decoding="async" class="w-full h-full object-cover object-center blur-[7px] brightness-[0.45] scale-105" />
         <div class="absolute inset-0 bg-[#020a1c]/55"></div>
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,140,255,0.18)_0%,_rgba(2,7,20,0.82)_75%)]"></div>
       </div>
@@ -390,7 +395,7 @@
 
         <!-- Top Center: Yamaha Logo + NMAX 155 Official White Wordmark Lockup -->
         <div class="flex flex-col items-center mb-12 select-none">
-          <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" class="h-[76px] w-auto object-contain drop-shadow-[0_0_22px_rgba(230,0,18,0.55)]" />
+          <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" decoding="async" class="h-[76px] w-auto object-contain drop-shadow-[0_0_22px_rgba(230,0,18,0.55)]" />
           <img src="nmax.png" alt="NMAX 155" class="h-[48px] w-auto object-contain mt-4 drop-shadow-[0_0_16px_rgba(0,225,255,0.65)]" />
         </div>
 
@@ -505,8 +510,8 @@
       
       <!-- Night City Skyline & Illuminated Bridge -> High-Speed Highway Backdrop -->
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="gameplay-bg.jpg" alt="" class="w-full h-full object-cover object-center" />
-        <img id="gameplayFastBg" src="gameplay-fast-bg.jpg" alt="" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-1000" />
+        <img src="gameplay-bg.jpg" alt="" decoding="async" class="w-full h-full object-cover object-center" />
+        <img id="gameplayFastBg" src="gameplay-fast-bg.jpg" alt="" decoding="async" class="absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-1000" />
         <div class="absolute inset-x-0 top-0 h-[360px] bg-gradient-to-b from-[#010716]/75 via-[#020b22]/30 to-transparent"></div>
       </div>
 
@@ -516,8 +521,8 @@
         <!-- Top-Left: Yamaha Logo + NMAX 155 Official Wordmark + Home Icon Button -->
         <div class="flex flex-col items-start space-y-3">
           <div class="flex flex-col items-start pt-1 select-none">
-            <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" class="h-[56px] w-auto object-contain drop-shadow-[0_0_18px_rgba(230,0,18,0.5)]" />
-            <img src="nmax.png" alt="NMAX 155" class="h-[36px] w-auto object-contain mt-2 drop-shadow-[0_0_14px_rgba(0,225,255,0.6)]" />
+            <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" decoding="async" class="h-[56px] w-auto object-contain drop-shadow-[0_0_18px_rgba(230,0,18,0.5)]" />
+            <img src="nmax.png" alt="NMAX 155" decoding="async" class="h-[36px] w-auto object-contain mt-2 drop-shadow-[0_0_14px_rgba(0,225,255,0.6)]" />
           </div>
 
           <button id="btnGameplayHome" title="Home" class="pointer-events-auto w-14 h-14 rounded-2xl bg-[#03122d]/85 border-2 border-[#00D2FF] backdrop-blur-md flex items-center justify-center text-white cursor-pointer active:scale-95 hover:brightness-110 transition"
@@ -558,15 +563,15 @@
       
       <!-- Night City Skyline & High-Speed Highway Backdrop -->
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="gameplay-fast-bg.jpg" alt="" class="w-full h-full object-cover object-center brightness-[0.8]" />
+        <img src="gameplay-fast-bg.jpg" alt="" decoding="async" class="w-full h-full object-cover object-center brightness-[0.8]" />
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_48%,_rgba(2,18,48,0.45)_0%,_rgba(1,6,18,0.82)_80%)]"></div>
       </div>
 
       <!-- Top-Left: Yamaha Logo + NMAX 155 Official Wordmark -->
       <div class="relative z-10 w-full px-12 pt-10 flex justify-start items-start pointer-events-none">
         <div class="flex flex-col items-start pt-1 select-none">
-          <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" class="h-[56px] w-auto object-contain drop-shadow-[0_0_18px_rgba(230,0,18,0.5)]" />
-          <img src="nmax.png" alt="NMAX 155" class="h-[36px] w-auto object-contain mt-2 drop-shadow-[0_0_14px_rgba(0,225,255,0.6)]" />
+          <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" decoding="async" class="h-[56px] w-auto object-contain drop-shadow-[0_0_18px_rgba(230,0,18,0.5)]" />
+          <img src="nmax.png" alt="NMAX 155" decoding="async" class="h-[36px] w-auto object-contain mt-2 drop-shadow-[0_0_14px_rgba(0,225,255,0.6)]" />
         </div>
       </div>
 
@@ -654,14 +659,14 @@
       
       <!-- Night City Skyline & High-Speed Highway Backdrop -->
       <div class="absolute inset-0 z-0 pointer-events-none">
-        <img src="gameplay-fast-bg.jpg" alt="" class="w-full h-full object-cover object-center brightness-[0.8]" />
+        <img src="gameplay-fast-bg.jpg" alt="" decoding="async" class="w-full h-full object-cover object-center brightness-[0.8]" />
         <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(2,18,48,0.45)_0%,_rgba(1,6,18,0.82)_80%)]"></div>
       </div>
 
       <!-- Top-Left: Yamaha Logo + NMAX 155 Official Wordmark -->
       <div class="absolute top-10 left-12 z-10 flex flex-col items-start pointer-events-none select-none">
-        <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" class="h-[56px] w-auto object-contain drop-shadow-[0_0_18px_rgba(230,0,18,0.5)]" />
-        <img src="nmax.png" alt="NMAX 155" class="h-[36px] w-auto object-contain mt-2 drop-shadow-[0_0_14px_rgba(0,225,255,0.6)]" />
+        <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" decoding="async" class="h-[56px] w-auto object-contain drop-shadow-[0_0_18px_rgba(230,0,18,0.5)]" />
+        <img src="nmax.png" alt="NMAX 155" decoding="async" class="h-[36px] w-auto object-contain mt-2 drop-shadow-[0_0_14px_rgba(0,225,255,0.6)]" />
       </div>
 
       <!-- Centered Leaderboard Content Matching Screenshot -->
