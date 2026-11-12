@@ -380,6 +380,104 @@
     </section>
 
 
+    <!-- ==================== SCREEN 1.5: FACEBOOK FOLLOW GATE ==================== -->
+    <section id="screenFollow" class="hidden absolute inset-0 w-[1080px] h-[1920px] flex flex-col justify-center items-center px-12 z-20 overflow-hidden">
+
+      <!-- Blurred Night City & Neon Highway Backdrop -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <img src="hero-bg.jpg" alt="" decoding="async" class="w-full h-full object-cover object-center blur-[7px] brightness-[0.45] scale-105" />
+        <div class="absolute inset-0 bg-[#020a1c]/55"></div>
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,140,255,0.18)_0%,_rgba(2,7,20,0.82)_75%)]"></div>
+      </div>
+
+      <div class="relative z-10 flex flex-col items-center w-full">
+
+        <!-- Top Center: Yamaha Logo + NMAX 155 Wordmark Lockup -->
+        <div class="flex flex-col items-center mb-12 select-none">
+          <img src="Yamaha Logo for Dark Background.png" alt="Yamaha" decoding="async" class="h-[76px] w-auto object-contain drop-shadow-[0_0_22px_rgba(230,0,18,0.55)]" />
+          <img src="nmax.png" alt="NMAX 155" class="h-[48px] w-auto object-contain mt-4 drop-shadow-[0_0_16px_rgba(0,225,255,0.65)]" />
+        </div>
+
+        <!-- Chamfered Neon Card -->
+        <div class="relative w-[960px]">
+
+          <!-- Top Overlapping Chamfered Tab -->
+          <div class="absolute -top-[40px] left-1/2 -translate-x-1/2 w-[460px] h-[80px] flex items-center justify-center">
+            <div class="absolute inset-0"
+                 style="background: linear-gradient(180deg, #072252 0%, #03112d 100%); clip-path: polygon(28px 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 28px 100%, 0 50%);"></div>
+            <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 460 80" preserveAspectRatio="none"
+                 style="filter: drop-shadow(0 0 14px rgba(0, 210, 255, 0.95));">
+              <polygon points="28,1.5 432,1.5 458.5,40 432,78.5 28,78.5 1.5,40"
+                       fill="none" stroke="#00D8FF" stroke-width="3" vector-effect="non-scaling-stroke" />
+            </svg>
+            <h3 class="relative z-10 font-orbitron font-black italic text-[34px] tracking-[0.06em] text-white uppercase drop-shadow-[0_0_12px_rgba(0,225,255,0.8)] pr-2">
+              STAY CONNECTED
+            </h3>
+          </div>
+
+          <!-- Chamfered Glass Fill -->
+          <div class="relative w-full pt-24 pb-20 px-10 backdrop-blur-md text-center"
+               style="background: radial-gradient(circle at 50% 45%, rgba(6, 36, 84, 0.86) 0%, rgba(2, 12, 34, 0.92) 100%); clip-path: polygon(34px 0, calc(100% - 34px) 0, 100% 34px, 100% calc(100% - 34px), calc(100% - 34px) 100%, 34px 100%, 0 calc(100% - 34px), 0 34px);">
+
+            <!-- Facebook Icon -->
+            <div class="mx-auto mb-8 w-[120px] h-[120px] rounded-3xl flex items-center justify-center"
+                 style="background: linear-gradient(180deg, #1877F2 0%, #0d5dd6 100%); box-shadow: 0 0 34px rgba(24, 119, 242, 0.8), inset 0 0 16px rgba(255,255,255,0.2);">
+              <svg class="w-[72px] h-[72px] fill-white" viewBox="0 0 24 24">
+                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z" />
+              </svg>
+            </div>
+
+            <!-- Headline -->
+            <h4 class="font-orbitron font-black text-[40px] tracking-[0.08em] text-white uppercase drop-shadow-[0_0_14px_rgba(0,225,255,0.75)]">
+              FOLLOW US ON FACEBOOK
+            </h4>
+            <p class="mt-6 font-montserrat font-semibold text-[27px] leading-[1.45] text-white/90">
+              Follow the official Yamaha Sri Lanka page<br />
+              to unlock the ride!
+            </p>
+
+            <!-- Facebook Follow Button -->
+            <button id="btnFollowFacebook" class="mt-12 relative w-[560px] h-[92px] flex items-center justify-center space-x-5 cursor-pointer transition-transform active:scale-95 hover:brightness-110">
+              <div class="absolute inset-0"
+                   style="background: linear-gradient(180deg, #1877F2 0%, #0d5dd6 100%); clip-path: polygon(28px 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 28px 100%, 0 50%);"></div>
+              <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 560 92" preserveAspectRatio="none"
+                   style="filter: drop-shadow(0 0 18px rgba(24, 119, 242, 0.95));">
+                <polygon points="28,1.5 532,1.5 558.5,46 532,90.5 28,90.5 1.5,46"
+                         fill="none" stroke="#8FC6FF" stroke-width="3.2" vector-effect="non-scaling-stroke" />
+              </svg>
+              <svg class="relative z-10 w-11 h-11 fill-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]" viewBox="0 0 24 24">
+                <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.19 2.23.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.45 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z" />
+              </svg>
+              <span class="relative z-10 font-orbitron font-black italic text-[32px] tracking-[0.1em] text-white uppercase drop-shadow-[0_0_12px_rgba(255,255,255,0.65)]">
+                FOLLOW @YamahaLK
+              </span>
+            </button>
+
+            <!-- Hint -->
+            <p id="followLockHint" class="mt-8 font-orbitron text-[19px] tracking-[0.3em] text-cyan-300/80 uppercase animate-pulse">
+              FOLLOW THE PAGE TO UNLOCK PLAY
+            </p>
+
+            <!-- Play Now Button (locked until followed) -->
+            <button id="btnFollowPlay" class="mt-6 relative w-[390px] h-[90px] flex items-center justify-center opacity-40 pointer-events-none grayscale cursor-pointer transition-transform active:scale-95 hover:brightness-110">
+              <div class="absolute inset-0"
+                   style="background: linear-gradient(180deg, rgba(8, 34, 80, 0.9) 0%, rgba(3, 14, 36, 0.95) 100%); clip-path: polygon(28px 0, calc(100% - 28px) 0, 100% 50%, calc(100% - 28px) 100%, 28px 100%, 0 50%);"></div>
+              <svg id="followPlayBorder" class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 390 90" preserveAspectRatio="none"
+                   style="filter: drop-shadow(0 0 18px rgba(0, 220, 255, 0.95));">
+                <polygon points="28,1.5 362,1.5 388.5,45 362,88.5 28,88.5 1.5,45"
+                         fill="none" stroke="#00E5FF" stroke-width="3.2" vector-effect="non-scaling-stroke" />
+              </svg>
+              <span class="relative z-10 font-orbitron font-black italic text-[34px] tracking-[0.14em] text-white uppercase drop-shadow-[0_0_12px_rgba(255,255,255,0.65)] pr-2">
+                PLAY NOW
+              </span>
+            </button>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
     <!-- ==================== SCREEN 2: HOW TO PLAY ==================== -->
     <section id="screenInstructions" class="hidden absolute inset-0 w-[1080px] h-[1920px] flex flex-col justify-center items-center px-12 z-20 overflow-hidden">
       
@@ -1145,6 +1243,7 @@
 
     const screens = {
       title: document.getElementById('screenTitle'),
+      follow: document.getElementById('screenFollow'),
       instructions: document.getElementById('screenInstructions'),
       gameplay: document.getElementById('screenGameplay'),
       complete: document.getElementById('screenComplete'),
@@ -1163,7 +1262,7 @@
         }
       });
 
-      const hideChrome = (name === 'instructions' || name === 'gameplay' || name === 'complete' || name === 'leaderboard');
+      const hideChrome = (name === 'follow' || name === 'instructions' || name === 'gameplay' || name === 'complete' || name === 'leaderboard');
       mainHeader.classList.toggle('hidden', hideChrome);
       mainFooter.classList.toggle('hidden', hideChrome);
     }
@@ -1532,6 +1631,29 @@
        ========================================================== */
     document.getElementById('btnTitlePlay').addEventListener('click', () => {
       sound.init();
+      showScreen('follow');
+    });
+
+    /* --- Facebook Follow Gate --- */
+    let facebookFollowed = false;
+    const btnFollowFacebook = document.getElementById('btnFollowFacebook');
+    const btnFollowPlay = document.getElementById('btnFollowPlay');
+    const followLockHint = document.getElementById('followLockHint');
+
+    btnFollowFacebook.addEventListener('click', () => {
+      window.open('https://www.facebook.com/YamahaLK/', '_blank');
+      if (!facebookFollowed) {
+        facebookFollowed = true;
+        // Unlock the PLAY NOW button
+        btnFollowPlay.classList.remove('opacity-40', 'pointer-events-none', 'grayscale');
+        btnFollowPlay.classList.add('animate-pulse');
+        followLockHint.innerHTML = '&#10003; FOLLOWED &mdash; YOU ARE READY TO RIDE!';
+        followLockHint.classList.remove('text-cyan-300/80', 'animate-pulse');
+        followLockHint.classList.add('text-emerald-300');
+      }
+    });
+
+    btnFollowPlay.addEventListener('click', () => {
       showScreen('instructions');
     });
 
